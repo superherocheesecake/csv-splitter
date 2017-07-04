@@ -5,9 +5,16 @@ A command line and Node JS tool to split CSV files
 Some CSVs are really big and hard to process.
 This tool is here to help you split them in different parts.
 
-### Global installation
-Enter the root directory and run `npm install -g`, this will enable you to use `csv-splitter` system-wide.
+### Installation
 
+You can downlad this from npm:
+```
+npm install csv-splitter
+```
+
+Or install it from this repo, by running `npm install` in the root directory.
+
+>   [TIP] If you want to use this utility from the command line and system-wide, just add the `-g` option to the npm install command.
 
 ### CLI Usage
 
