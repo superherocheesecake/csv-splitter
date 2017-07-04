@@ -1,0 +1,41 @@
+{
+  "name": "csv-splitter",
+  "version": "1.0.0",
+  "description": "A command line and Node JS tool to split CSV files",
+  "main": "CsvSplitter.js",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "line-reader": "^0.4.0",
+    "mkdirp": "^0.5.1",
+    "yargs": "^8.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "./csv-splitter.js ./tests-sandbox/data.csv 100 -o ./tests-sandbox/output"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superherocheesecake/csv-splitter.git"
+  },
+  "keywords": [
+    "CSV",
+    "split",
+    "command",
+    "line",
+    "cli"
+  ],
+  "author": "Vincent (ghzmdr)",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/superherocheesecake/csv-splitter/issues"
+  },
+  "homepage": "https://github.com/superherocheesecake/csv-splitter#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "mkdirp": "^0.5.1",
+    "yargs": "^8.0.2"
+  },
+  "bin": {
+    "csv-splitter": "csv-splitter.js"
+  }
+}

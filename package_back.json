@@ -1,0 +1,23 @@
+{
+  "name": "csv-splitter",
+  "version": "1.0.0",
+  "description": "An utility to split CSV files",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd tests && node ./index.js"
+  },
+  "keywords": [
+    "csv",
+    "split"
+  ],
+  "author": "Vincent De Feo (ghzmdr)",
+  "license": "Unlicense",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "mkdirp": "^0.5.1",
+    "yargs": "^8.0.2"
+  },
+  "bin": {
+    "csv-splitter": "csv-splitter.js"
+  }
+}
