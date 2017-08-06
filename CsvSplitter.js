@@ -10,7 +10,7 @@ CsvSplitter.prototype = {
     split: function(filepath, maxEntries, ouputDirectory) {
         this._csvReader = new CsvReader(filepath);
 
-        this._amountOfFiles = ~~(this._csvReader.length() / maxEntries);
+        this._amountOfFiles = ~~((this._csvReader.length()-1) / maxEntries)+1;
         this._panLength = `${this._amountOfFiles}`.length;
         this._baseFileName = Path.basename(filepath, '.csv');
 
@@ -37,6 +37,8 @@ CsvSplitter.prototype = {
 
             csvWriter.addLine(this._csvReader.getLine(i));
         }
+        csvWriter.write(this._getNextFileName());
+        console.log(`[CsvSplitter] Wrote ${this._currentFile} / ${this._amountOfFiles} files`);
 
         console.info('[CsvSplitter] - DONE');
     },
