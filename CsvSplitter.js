@@ -10,12 +10,8 @@ CsvSplitter.prototype = {
     split: function(filepath, maxEntries, ouputDirectory) {
         this._csvReader = new CsvReader(filepath);
 
-        this._amountOfFiles = (this._csvReader.length() - 1) / maxEntries;
-
-        if (this._amountOfFiles % 1 !== 0) {
-            this._amountOfFiles = ~~(this._amountOfFiles) + 1;
-        }
-
+        this._amountOfFiles = Math.ceil((this._csvReader.length() - 1) / maxEntries);
+        
         this._panLength = `${this._amountOfFiles}`.length;
         this._baseFileName = Path.basename(filepath, '.csv');
 
